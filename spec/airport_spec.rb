@@ -19,6 +19,9 @@ describe Airport do
   it 'is able to takeoff an airplane' do
     gatwick = Airport.new
     airbus = Airplane.new
+    concorde = Airplane.new
+    gatwick.land(airbus)
+    gatwick.land(concorde)
     expect(gatwick.takeoff(airbus)).to eq airbus
   end
 end
