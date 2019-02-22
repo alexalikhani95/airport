@@ -1,4 +1,4 @@
-require 'ariport'
+require 'airport'
 require 'airplane'
 
 describe Airport do
