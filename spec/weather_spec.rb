@@ -2,8 +2,7 @@ require 'weather'
 require 'airport'
 
 describe Weather do
-  it 'it allows us to check if weather is stormy' do
-    allow(Weather).to receive(:stormy)
-    expect(Weather.new.stormy).to be(true).or be(false)
+  it 'returns 1 or 2' do
+    expect(subject.stormy?).to be(1).or be(2)
   end
 end
