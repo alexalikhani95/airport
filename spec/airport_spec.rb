@@ -15,4 +15,10 @@ describe Airport do
     expect(gatwick.land(airbus)).to eq [airbus]
     expect(gatwick.land(concorde)).to eq [airbus, concorde]
   end
+
+  it 'is able to takeoff an airplane' do
+    gatwick = Airport.new
+    airbus = Airplane.new
+    expect(gatwick.takeoff(airbus)).to eq airbus
+  end
 end
