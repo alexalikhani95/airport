@@ -7,4 +7,12 @@ describe Airport do
     airbus = Airplane.new
     expect(gatwick.land(airbus)).to eq [airbus]
   end
+
+  it 'is able to land multiple airplanes' do
+    gatwick = Airport.new
+    airbus = Airplane.new
+    concorde = Airplane.new
+    expect(gatwick.land(airbus)).to eq [airbus]
+    expect(gatwick.land(concorde)).to eq [airbus, concorde]
+  end
 end
